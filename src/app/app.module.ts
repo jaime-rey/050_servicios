@@ -2,15 +2,20 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
+import { LibroListaComponent } from './libro-lista/libro-lista.component';
+
+import { LoggerService } from './logger.service';
+import { LibroService } from './libro.service';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    LibroListaComponent
   ],
   imports: [
     BrowserModule
   ],
-  providers: [],
+  providers: [LoggerService, LibroService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
